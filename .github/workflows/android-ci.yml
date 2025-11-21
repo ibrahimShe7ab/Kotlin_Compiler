@@ -2,9 +2,9 @@ name: Android CI/CD
 
 on:
   push:
-    branches: [ master  ]
+    branches: [ master ]
   pull_request:
-    branches: [ master  ]
+    branches: [ master ]
 
 jobs:
   build:
@@ -30,6 +30,9 @@ jobs:
           key: gradle-${{ runner.os }}-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
           restore-keys: |
             gradle-${{ runner.os }}-
+
+      - name: Make gradlew executable
+        run: chmod +x gradlew
 
       - name: Build Debug APK
         run: ./gradlew assembleDebug
