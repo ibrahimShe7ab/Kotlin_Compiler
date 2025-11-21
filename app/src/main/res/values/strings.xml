@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Kotlin Compiler</string>
+     <string name="lexer">lexer</string>
+    <string name="back">back</string>
+    <string name="expression">add the expression</string>
+    <string name="parser_syntax">Parser(Syntax)</string>
+    <string name="semanticanalyzer">SemanticAnalyzer</string>
+</resources>
